@@ -1,10 +1,10 @@
 <?php 
-    /*------------------------------------------------------------------------
-# author    Gonzalo Suez
-# copyright Copyright � 2012 gsuez.cl. All rights reserved.
-# @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.gsuez.cl
--------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+  # author Adrian Fürschuß
+  # copyright Copyright © 2014 afuersch. All rights reserved.
+  # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+  ------------------------------------------------------------------------- */
+
     defined( '_JEXEC' ) or die;
     // variables
     $app = JFactory::getApplication();

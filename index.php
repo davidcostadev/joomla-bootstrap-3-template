@@ -1,17 +1,16 @@
 <?php
-        /*------------------------------------------------------------------------
-# author Gonzalo Suez
-# copyright Copyright © 2013 gsuez.cl. All rights reserved.
+/*------------------------------------------------------------------------
+# author Adrian Fürschuß
+# copyright Copyright © 2014 afuersch. All rights reserved.
 # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website http://www.gsuez.cl
 -------------------------------------------------------------------------*/
 // no direct access
 defined('_JEXEC') or die;
 
 include 'includes/params.php';
 ?>
-<!doctype html>
-<html lang="en" >
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>">
 
 <?php
 include 'includes/head.php';

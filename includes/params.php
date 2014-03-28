@@ -1,10 +1,10 @@
 <?php
-	/*------------------------------------------------------------------------
-# author    Gonzalo Suez
-# copyright Copyright � 2013 gsuez.cl. All rights reserved.
-# @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
-# Website   http://www.gsuez.cl
--------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------
+  # author Adrian Fürschuß
+  # copyright Copyright © 2014 afuersch. All rights reserved.
+  # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+  ------------------------------------------------------------------------- */
+
 defined('_JEXEC') or die;
 // Getting params from template
 $params = JFactory::getApplication()->getTemplate(true)->params;
@@ -43,9 +43,12 @@ $this->setGenerator(null);
 // force latest IE & chrome frame
 $doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
 // Add javascripts
-if ($modernizr==1) $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
-// add stylesheets
-if ($fontawesome==1) $doc->addStyleSheet($tpath.'/css/font-awesome.min.css');
+if ($modernizr==1) {
+    $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
+}// add stylesheets
+if ($fontawesome==1) {
+    $doc->addStyleSheet($tpath.'/css/font-awesome.min.css');
+}
 // file ending
 ?>
 <?php
