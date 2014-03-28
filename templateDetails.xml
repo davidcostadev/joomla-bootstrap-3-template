@@ -27,8 +27,10 @@
     </files>
     <positions>
         <position>top</position>
-        <position>breadcrumbs</position>
+        <position>top-left</position>
+        <position>top-right</position>
         <position>navigation</position>
+        <position>breadcrumbs</position>
         <position>fullwidth</position>
         <position>showcase</position>
         <position>feature</position>
