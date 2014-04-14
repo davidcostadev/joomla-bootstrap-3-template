@@ -100,6 +100,6 @@ if($this->countModules('left') == 0 && $this->countModules('right') > 1) {
 } 
 
 if($this->countModules('right') == 0) {
-    $rightcolgrid  = '0'
+    $rightcolgrid  = '0';
 }
 
