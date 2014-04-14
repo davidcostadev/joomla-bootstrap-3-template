@@ -20,7 +20,7 @@ $app    = JFactory::getApplication();
 $doc    = JFactory::getDocument();
 
 
-// script joomla removed
+// Removed useless scripts
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/system/js/core.js']);
@@ -31,6 +31,17 @@ unset($doc->_scripts[JURI::root(true) . '/media/system/js/validate.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery.min.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-noconflict.js']);
 unset($doc->_scripts[JURI::root(true) . '/media/jui/js/bootstrap.min.js']);
+unset($doc->_scripts[JURI::root(true) . '/media/jui/js/jquery-migrate.min.js']);
+unset($doc->_scripts[JURI::root(true) . '/media/system/js/tabs-state.js']);
+
+if (isset($this->_script['text/javascript'])) { 
+    $this->_script['text/javascript'] = preg_replace(
+        '%jQuery\(window\).on\(\'load\',  function\(\) \{\n.*?new JCaption\(\'img.caption\'\);\n(.*?)\}\);%', '',
+         $this->_script['text/javascript']);
+
+    if (empty($this->_script['text/javascript']))
+        unset($this->_script['text/javascript']);
+}
 
 
 // Column widths
