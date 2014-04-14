@@ -210,15 +210,18 @@ include 'includes/params.php';
             })(jQuery);
         </script>
         <script type="text/javascript">
-            $('.dropdown input').click(function(e) {
-                e.stopPropagation();
-            });
+            (function($) {
+                $('.dropdown input').click(function(e) {
+                    e.stopPropagation();
+                });
+            })(jQuery);
         </script>
         <script type="text/javascript">
-            $('.dropdown-menu .dropdown-submenu a[data-toggle="dropdown-submenu"]').click(function(e)
-            {
-                e.stopPropagation();
-            });
+            (function($) {
+                $('.dropdown-menu .dropdown-submenu a[data-toggle="dropdown-submenu"]').click(function(e) {
+                    e.stopPropagation();
+                });
+            })(jQuery);
         </script>
 
         <!-- JS -->
