@@ -1,3 +1,14 @@
+/**
+ *
+ * Bootstrap 3 for Joolma
+ *
+ * @author Gonzalo Suez<info@gsuez.cl>, Adrian Fürschuß, David Costa<davidcosta@csthost.com.br>
+ * @copyright Copyright © 2014 David Costa <davidcosta@csthost.com.br>. All right reserved
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link https://github.com/davidsantanacosta/joomla-bootstrap-3-template
+ *
+ */
+
 @charset "utf-8";
 /* CSS Document */
 
@@ -20,7 +31,6 @@ img {
     background: none repeat scroll 0 0 #444444;
     color: #ddd;
     font-size: 14px;
-    margin-bottom:16px;
     padding-bottom:6px;
     padding-top: 6px;
 }
@@ -49,7 +59,13 @@ img {
     border: 0;
     padding: 0;
 }
-
+#bartop{
+  background: #428BCA;
+  background-color: #F8F8F8;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 20px;
+}
 #fullwidth{
 	overflow: hidden;
 }
@@ -65,16 +81,11 @@ img {
     color: #AAAAAA;
 }
 .moduletable {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border: 1px solid #E5E5E5;
     margin-bottom: 20px;
-    padding: 10px;
 }
 
 #brand {
     float: left;
-    padding-left:15px;
-    padding-top: 5px;
 }
 
 .page-header {
@@ -120,30 +131,8 @@ label, select, button, input[type="button"], input[type="reset"], input[type="su
     float: right;
     margin: 10px;
 }
-.btn {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #F5F5F5;
-    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
-    background-repeat: repeat-x;
-    border-color: #BBBBBB #BBBBBB #A2A2A2;
-    border-image: none;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 18px;
-    margin-bottom: 0;
-    padding: 4px 12px;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    vertical-align: middle;
+.row .block{
+  margin: 0 15px;
 }
 
 html,
@@ -255,17 +244,78 @@ body {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  
+
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  
+    #brand{
+      float: none;
+      text-align: center;
+      margin-left: -125px;
+      position: absolute;
+      left: 50%;
+      top: 7px;
+      width: 250px !important;
+      height: 35px !important;
+   }
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  
+  #brand{
+    
+  }
 }
 /* Large desktop */
 @media (min-width: 1200px) {
   
+}
+
+.navbar-toggle-left{
+    float: left !important;
+    left:0 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+           -moz-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+    }
+
+    .row-offcanvas-right {
+        right: 0;
+    }
+
+    .row-offcanvas-left {
+        left: 0;
+    }
+
+    .row-offcanvas-right
+    .sidebar-offcanvas {
+        right: -80%; /* 6 columns */
+    }
+
+    .row-offcanvas-left
+    .sidebar-offcanvas {
+        left: -80%; /* 6 columns */
+    }
+
+    .row-offcanvas-right.active {
+        right: 85%; /* 6 columns */
+    }
+
+    .row-offcanvas-left.active {
+        left: 85%; /* 6 columns */
+    }
+
+    .sidebar-offcanvas {
+        position: absolute !important;
+        top: 0 !important;
+        width: 80%  !important; /* 6 columns */
+    }
+
+    .row-offcanvas.active div{
+
+    }
 }

@@ -1,10 +1,21 @@
-body {
+/**
+ *
+ * Bootstrap 3 for Joolma
+ *
+ * @author Gonzalo Suez<info@gsuez.cl>, Adrian Fürschuß, David Costa<davidcosta@csthost.com.br>
+ * @copyright Copyright © 2014 David Costa <davidcosta@csthost.com.br>. All right reserved
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link https://github.com/davidsantanacosta/joomla-bootstrap-3-template
+ *
+ */
+
+ body {
 
   padding-bottom: 20px;
 }
 
 .navbar {
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .navbar-default {

@@ -3,10 +3,10 @@
 <extension version="2.5" type="template" method="upgrade">
     <name>Bootstrap 3 for Joomla</name>
     <creationDate>2014-03-27</creationDate>
-    <author>Adrian Fürschuß</author>
-    <copyright>Copyright (C) 2014 afuersch</copyright>
-    <authorEmail></authorEmail>
-    <authorUrl></authorUrl>
+    <author>Gonzalo Suez, Adrian Fürschuß e David Costa</author>
+    <copyright>Copyright © 2014 David Costa</copyright>
+    <authorEmail>davidcosta@csthost.com.br</authorEmail>
+    <authorUrl>davidcosta.com.br</authorUrl>
     <version>Stable 1.0</version>
     <description><![CDATA[ 
 		<h1>Bootstrap 3 Template for Joomla! 3.0</h1>
@@ -32,6 +32,8 @@
         <position>navigation</position>
         <position>breadcrumbs</position>
         <position>fullwidth</position>
+        <position>bartop-left</position>
+        <position>bartop-right</position>
         <position>showcase</position>
         <position>feature</position>
         <position>left</position>
