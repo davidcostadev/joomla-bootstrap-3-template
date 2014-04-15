@@ -33,9 +33,11 @@ img {
     padding: 10px 0;
 }
 #brand .thumbnail{
-  padding: 0px;
-  margin: 0px;
+    background-color: rgba(0, 0, 0, 0);
   border: none;
+    margin: 0px;
+    max-height: 40px;
+    padding: 0px;
 }
 
 #top {
