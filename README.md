@@ -1,28 +1,46 @@
-master-bootstrap
+Joomla Bootstrap 3 Template
 =======================
-Created by Gonzalo Suez. See the official site for more info: http://www.masterbootstrap.com
-
-This template is based in Twitter Bootstrap 3, for Joomla! 3.x
-
-<h3>Some features:</h3>
-<ul>
-<li>100% Bootstrap 3.0</li>
-<li>HTML 5</li>
-<li>Modernizr</li>
-<li>Font Awesome</li>
-<li>PIE for IE</li>
-<li>Upload Logo from Administrator</li>
-<li>Fast and Light</li>
-<li>Positions 100% managed for class CSS</li>
-<li>Left and Right Modules with independent proportions!</li>
-<li>A Fullwidth position for your sliders!</li>
-<li>Sticky Footer by default!</li>
-</ul>
-
-<h4>Attention: this version is stable, but under development</h4>
 
 
+This is a fork in project created by Gonzalo Suez and improve by Adrian Fürschuß and David Costa
 
 
+This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x
 
 
+### Some features:
+
+- 100% Bootstrap 3.0
+- HTML 5
+- Modernizr
+- Font Awesome
+- PIE for IE
+- Upload Logo from Administrator
+- Fast and Light
+- Positions 100% managed for class CSS
+- Left and Right Modules with independent proportions!
+- A Fullwidth position for your sliders!
+- Bartop-fullwidth **New**
+- Sticky Footer by default!
+
+
+#### Attention: This version is stable
+
+But if you finded some problem or have any sugestion, please open an issue to us.
+
+### Contributors
+
+This is some names of contributors for this project
+
+- Gonzalo Suez
+- Adrian Fürschuß
+- David Costa
+
+### FAQ
+
+This is some constants questions
+
+[FAQ][1]
+
+
+[1]: https://github.com/davidsantanacosta/joomla-bootstrap-3-template/wiki/FAQ
