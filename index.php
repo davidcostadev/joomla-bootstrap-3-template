@@ -151,7 +151,7 @@ include 'includes/params.php';
                         <div id="breadcrumbs">        
 
                             <div class="row">
-                                <jdoc:include type="modules" name="breadcrumbs" style="block" />
+                                <jdoc:include type="modules" name="breadcrumbs" style="none" />
                             </div>
 
                         </div>
