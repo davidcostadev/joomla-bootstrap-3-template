@@ -98,7 +98,7 @@ include 'includes/params.php';
                 <?php if ($this->countModules('fullwidth')) : ?>
                     <div id="fullwidth">
                         <div class="row">
-                            <jdoc:include type="modules" name="fullwidth" style="block"/>
+                            <jdoc:include type="modules" name="fullwidth" style="none"/>
                         </div>
                     </div>
                 <?php endif; ?>
