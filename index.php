@@ -83,13 +83,13 @@ include 'includes/params.php';
                                     </button>
                                 <?php endif; ?>
                             </div>
-                            <div class="navbar-collapse collapse">
-                                <?php if ($this->countModules('navigation')) : ?>
-                                    <nav class="navigation" role="navigation">
+                            <?php if ($this->countModules('navigation')) : ?>
+                                <div class="navbar-collapse collapse">
+                                    <nav class="navigation navbar-right" role="navigation">
                                         <jdoc:include type="modules" name="navigation" style="none" />
                                     </nav>
-                                <?php endif; ?>
-                            </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ include 'includes/params.php';
                         <div id="breadcrumbs">        
 
                             <div class="row">
-                                <jdoc:include type="modules" name="breadcrumbs" style="none" />
+                                <jdoc:include type="modules" name="breadcrumbs" style="block" />
                             </div>
 
                         </div>
