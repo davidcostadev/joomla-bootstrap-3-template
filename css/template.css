@@ -26,7 +26,9 @@ body {
 img {
     max-width: 100%;
 }
-
+#topnav p{
+    margin: 0;
+}
 #brand {
     float: left;
     width: 25%;
@@ -34,7 +36,7 @@ img {
 }
 #brand .thumbnail{
     background-color: rgba(0, 0, 0, 0);
-  border: none;
+    border: none;
     margin: 0px;
     max-height: 40px;
     padding: 0px;
