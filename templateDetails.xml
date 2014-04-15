@@ -7,7 +7,7 @@
     <copyright>Copyright © 2014 David Costa</copyright>
     <authorEmail>davidcosta@csthost.com.br</authorEmail>
     <authorUrl>davidcosta.com.br</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description><![CDATA[ 
         <h1>Bootstrap 3.1.1 Template for Joomla! 3.x</h1>
     ]]></description>
@@ -40,7 +40,9 @@
         <position>right</position>
         <position>content-top</position>
         <position>content-bottom</position>
-        <position>bottom</position>    
+        <position>bottom-a</position>
+        <position>bottom-b</position>
+        <position>bottom-c</position>
         <position>footer</position>
         <position>debug</position>
     </positions>
@@ -73,9 +75,6 @@
             <!-- LOGO-->
             <fieldset  name="logo" type="upload_func" label="Logo">
                 <field name="logo_file" type="media" label="Select your logo:"></field>
-                <field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
-                <field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
-                <field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
             </fieldset>
         </fields>
     </config>

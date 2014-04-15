@@ -26,71 +26,71 @@ include 'includes/params.php';
 
     <body>
         <div class="wrapper">
-            <header>
-                <div class="container">
+            <?php if ($this->countModules('top') || $this->countModules('top-left') || $this->countModules('top-right')) : ?>
+                <header id="top">
+                    <div class="container">
 
-                    <nav role="navigation" id="topnav">
-                        <!--top-->
-                        <?php if ($this->countModules('top')) : ?>
-                            <div class="row">
-                                <jdoc:include type="modules" name="top" style="none" />        
-                            </div>
-                        <?php endif; ?>
-                        <!--top-->
-                        <!-- top-left -->
-                        <?php if ($this->countModules('top-left')) : ?>
-                            <div class="pull-left">
-                                <jdoc:include type="modules" name="top-left" style="none" />
-                            </div>
-                        <?php endif; ?>
-                        <!-- top-left -->
-                        <!-- top-right -->
-                        <?php if ($this->countModules('top-right')) : ?>
-                            <div class="pull-right">
-                                <jdoc:include type="modules" name="top-right" style="none" />
-                            </div>
-                        <?php endif; ?>
-                        <!-- top-right -->
-                    </nav>
-                </div>
-            </header>
+                        <nav role="navigation" id="topnav">
+                            <!--top-->
+                            <?php if ($this->countModules('top')) : ?>
+                                <div class="row">
+                                    <jdoc:include type="modules" name="top" style="none" />        
+                                </div>
+                            <?php endif; ?>
+                            <!--top-->
+                            <!-- top-left -->
+                            <?php if ($this->countModules('top-left')) : ?>
+                                <div class="pull-left">
+                                    <jdoc:include type="modules" name="top-left" style="none" />
+                                </div>
+                            <?php endif; ?>
+                            <!-- top-left -->
+                            <!-- top-right -->
+                            <?php if ($this->countModules('top-right')) : ?>
+                                <div class="pull-right">
+                                    <jdoc:include type="modules" name="top-right" style="none" />
+                                </div>
+                            <?php endif; ?>
+                            <!-- top-right -->
+                        </nav>
+                    </div>
+                </header>
+            <?php endif; ?>
 
             <div id="wrap">
                 <!--Navigation-->
-                <div id="navigation">
+                <div class="navbar navbar-default navbar-static-top" id="navigation" role="navigation">
                     <div class="container">
-                        <div class="navbar navbar-default" role="navigation">
-                            <div id="brand">
-                                <a href="<?php echo $this->params->get('logo_link') ?>">
-                                    <img src="<?php echo $this->params->get('logo_file') ?>"class="thumbnail" alt="Logo" />
-                                </a>
-                            </div>
-                            <div class="navbar-header">
-                                <?php if ($this->countModules('left')) : ?>
-                                    <button type="button" class="navbar-toggle navbar-toggle-left" data-toggle="offcanvas">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                <?php endif; ?>
-                                <?php if ($this->countModules('navigation')) : ?>
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                <?php endif; ?>
-                            </div>
+                        <div id="brand">
+                            <a href="<?php echo JURI::base() ?>">
+                                <img src="<?php echo $this->params->get('logo_file') ?>" class="thumbnail" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="navbar-header">
+                            <?php if ($this->countModules('left')) : ?>
+                                <button type="button" class="navbar-toggle navbar-toggle-left" data-toggle="offcanvas">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            <?php endif; ?>
                             <?php if ($this->countModules('navigation')) : ?>
-                                <div class="navbar-collapse collapse">
-                                    <nav class="navigation navbar-right" role="navigation">
-                                        <jdoc:include type="modules" name="navigation" style="none" />
-                                    </nav>
-                                </div>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
                             <?php endif; ?>
                         </div>
+                        <?php if ($this->countModules('navigation')) : ?>
+                            <div class="navbar-collapse collapse">
+                                <nav class="navigation navbar-right" role="navigation">
+                                    <jdoc:include type="modules" name="navigation" style="none" />
+                                </nav>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <!--Navigation-->
@@ -195,19 +195,64 @@ include 'includes/params.php';
                     </div>
                 </div>
                 <!-- Content -->
-                <!-- bottom -->
-                <?php if ($this->countModules('bottom')) : ?>
-                    <div id="bottom">
-                        <div class="container">
-                            <div class="row">
-                                <jdoc:include type="modules" name="bottom" style="block" />
-                            </div>
+            </div>
+            <!-- bottom-a -->
+            <?php if ($this->countModules('bottom-a')) : ?>
+                <div id="bottom-a">
+                    <div class="container">
+                        <div class="row">
+                            <?php if ($this->countModules('bottom-a') == 1) : ?>
+                                <jdoc:include type="modules" name="bottom-a" style="block" />
+                            <?php elseif($this->countModules('bottom-a') == 2) : ?>
+                                <jdoc:include type="modules" name="bottom-a" style="grid6" />
+                            <?php elseif($this->countModules('bottom-a') == 3) : ?>
+                                <jdoc:include type="modules" name="bottom-a" style="grid4" />
+                            <?php else : ?>
+                                <jdoc:include type="modules" name="bottom-a" style="grid3" />
+                            <?php endif; ?>
                         </div>
                     </div>
-                <?php endif; ?>
-                <div id="push"></div>
-                <!-- bottom -->
-            </div>
+                </div>
+            <?php endif; ?>
+            <!-- bottom-a -->
+            <!-- bottom-b -->
+            <?php if ($this->countModules('bottom-b')) : ?>
+                <div id="bottom-b" class="bg-primary">
+                    <div class="container">
+                        <div class="row">
+                            <?php if ($this->countModules('bottom-b') == 1) : ?>
+                                <jdoc:include type="modules" name="bottom-b" style="block" />
+                            <?php elseif($this->countModules('bottom-b') == 2) : ?>
+                                <jdoc:include type="modules" name="bottom-b" style="grid6" />
+                            <?php elseif($this->countModules('bottom-b') == 3) : ?>
+                                <jdoc:include type="modules" name="bottom-b" style="grid4" />
+                            <?php else : ?>
+                                <jdoc:include type="modules" name="bottom-b" style="grid3" />
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <!-- bottom-b -->
+            <!-- bottom-c -->
+            <?php if ($this->countModules('bottom-c')) : ?>
+                <div id="bottom-c">
+                    <div class="container">
+                        <div class="row">
+                            <?php if ($this->countModules('bottom-c') == 1) : ?>
+                                <jdoc:include type="modules" name="bottom-c" style="block" />
+                            <?php elseif($this->countModules('bottom-c') == 2) : ?>
+                                <jdoc:include type="modules" name="bottom-c" style="grid6" />
+                            <?php elseif($this->countModules('bottom-c') == 3) : ?>
+                                <jdoc:include type="modules" name="bottom-c" style="grid4" />
+                            <?php else : ?>
+                                <jdoc:include type="modules" name="bottom-c" style="grid3" />
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <!-- bottom-c -->
             <!-- footer -->
             <?php if ($this->countModules('footer')) : ?>
                 <div id="footer">
@@ -225,35 +270,6 @@ include 'includes/params.php';
         <!-- page -->        
         <!-- JS -->
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-            (function($) {
-                $(document).ready(function() {
-                    // dropdown
-                    if ($('.parent').children('ul').length > 0) {
-                        $('.parent').addClass('dropdown');
-                        $('.parent > a').addClass('dropdown-toggle');
-                        $('.parent > a').attr('data-toggle', 'dropdown');
-                        $('.parent > a').append('<b class="caret"></b>');
-                        $('.parent > ul').addClass('dropdown-menu');
-                    }
-                });
-            })(jQuery);
-        </script>
-        <script type="text/javascript">
-            (function($) {
-                $('.dropdown input').click(function(e) {
-                    e.stopPropagation();
-                });
-            })(jQuery);
-        </script>
-        <script type="text/javascript">
-            (function($) {
-                $('.dropdown-menu .dropdown-submenu a[data-toggle="dropdown-submenu"]').click(function(e) {
-                    e.stopPropagation();
-                });
-            })(jQuery);
-        </script>
-
         <!-- JS -->
     </body>
 </html>

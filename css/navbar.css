@@ -15,16 +15,17 @@
 }
 
 .navbar {
-  margin: 10px 0;
+  
 }
 
-.navbar-default {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    border-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+#navigation.navbar-default {
+    border-top: 2px solid #CACACA;
+    border-bottom: 1px solid #CACACA;
+    margin-bottom: 15px;
 }
-
+#navigation .navbar-nav > li > a{
+    padding: 20px;
+}
 /*
 .sidebar-nav {
     padding: 9px 0;

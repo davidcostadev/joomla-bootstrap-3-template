@@ -32,22 +32,79 @@ defined('_JEXEC') or die;
 /*
  * Module chrome for rendering the module in a submenu
  */
-function modChrome_block($module, &$params, &$attribs)
-{
- 	if (!empty ($module->content)) : ?>
-           <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
-           	<div class="moduletable">           	
-	           	<?php if ($module->showtitle != 0) : ?>
-			<div class="module-title">
-	                		<h3 class="title"><?php echo $module->title; ?></h3>
-			</div>
-	                	<?php endif; ?>
-	                	<div class="module-content">
-	                		<?php echo $module->content; ?>
-	                	</div>
-              </div>             	
-           </div>
-	<?php endif;
+function modChrome_block($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="moduletable">               
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="module-title">
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="module-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>              
+        </div>
+    <?php endif;
 }
 
-?>
+/*
+ * Module chrome for rendering in grid for 4 columns
+ */
+function modChrome_grid3($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="col-xs-12 col-sm-6 col-md-3 <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="moduletable">               
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="module-title">
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="module-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>              
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering in grid for 3 columns
+ */
+function modChrome_grid4($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="col-xs-12 col-sm-4 col-md-4 <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="moduletable">               
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="module-title">
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="module-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>              
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering in grid for 2 columns
+ */
+function modChrome_grid6($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="col-xs-12 col-sm-6 col-md-6 <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <div class="moduletable">               
+                <?php if ($module->showtitle != 0) : ?>
+                    <div class="module-title">
+                        <h3 class="title"><?php echo $module->title; ?></h3>
+                    </div>
+                <?php endif; ?>
+                <div class="module-content">
+                    <?php echo $module->content; ?>
+                </div>
+            </div>              
+        </div>
+    <?php endif;
+}
