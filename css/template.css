@@ -45,7 +45,7 @@ img {
 
 #navigation {
     border-bottom: 3px solid #ccc;
-	margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 #main .main-box {
@@ -64,10 +64,11 @@ img {
   background-color: #F8F8F8;
   border-top: 1px solid #E7E7E7;
   border-bottom: 1px solid #E7E7E7;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 #fullwidth{
-	overflow: hidden;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 #fullwidth .moduletable {
@@ -86,8 +87,13 @@ img {
 
 #brand {
     float: left;
+    width: 25%;
 }
-
+#brand .thumbnail{
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
 .page-header {
     margin: 10px 0 20px;
 }
@@ -122,7 +128,7 @@ label, input, button, select, textarea {
     font-size: 13px;
     font-weight: normal;
     line-height: 18px;
-	font-family: arial;
+  font-family: arial;
 }
 label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
     cursor: pointer;

@@ -44,10 +44,6 @@ if (isset($this->_script['text/javascript'])) {
 }
 
 
-// Column widths
-$leftcolgrid = $this->params->get('leftColumnWidth', 3);
-$rightcolgrid= $this->params->get('rightColumnWidth', 3);
-
 
 // add javascript files
 // JavaScript plugins (requires jQuery) 
@@ -58,6 +54,7 @@ $doc->addScript('templates/'.$this->template . '/js/jquery-noconflict.js');
 $doc->addScript('templates/'.$this->template . '/js/bootstrap.min.js');
 $doc->addScript('templates/' . $this->template . '/js/holder.js');
 $doc->addScript('templates/' . $this->template . '/js/dropdown.js');
+$doc->addScript('templates/' . $this->template . '/js/display.js');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.min.css');
@@ -86,31 +83,34 @@ $this->setGenerator(null);
 $doc->setMetadata('x-ua-compatible', 'IE=edge,chrome=1');
 
 // Add javascripts
-if($modernizr==1) {
+if($modernizr == 1) {
     $doc->addScript($tpath.'/js/modernizr-2.6.2.js');
 }
 
 // add stylesheets
-if($fontawesome==1) {
+if($fontawesome == 1) {
     $doc->addStyleSheet($tpath.'/css/font-awesome.min.css');
 }
 
+
 // file ending
-if($this->countModules('bartop-left') > 0 && $this->countModules('bartop-right') == 0) {
-    $leftBarTopGrid  = 12;
-} elseif($this->countModules('bartop-left') == 0 && $this->countModules('bartop-right') > 0) {
-    $rightBarTopGrid = 12;    
+if($this->countModules('bartop-left') > 0 && $this->countModules('bartop-right') > 0) {
+    $bartopGrid = 6;
 } else {
-    $rightBarTopGrid = 6;
-    $leftBarTopGrid  = 6;
+    $bartopGrid = 12;
 }
 
 
-if($this->countModules('left') == 0 && $this->countModules('right') > 1) {
-    $leftcolgrid   = '0';
-} 
+//Content width
+$sidebarLeft  = $this->countModules('left');
+$sidebarRight = $this->countModules('right');
 
-if($this->countModules('right') == 0) {
-    $rightcolgrid  = '0';
+
+if($sidebarLeft >  0 && $sidebarRight >  0) {
+    $contentWidth = 6;
+} elseif($sidebarLeft == 0 && $sidebarRight == 0) {
+    $contentWidth = 12;
+} else {
+    $contentWidth = 9;
 }
 

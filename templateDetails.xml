@@ -7,10 +7,10 @@
     <copyright>Copyright © 2014 David Costa</copyright>
     <authorEmail>davidcosta@csthost.com.br</authorEmail>
     <authorUrl>davidcosta.com.br</authorUrl>
-    <version>Stable 1.0</version>
+    <version>1.0.0</version>
     <description><![CDATA[ 
-		<h1>Bootstrap 3 Template for Joomla! 3.0</h1>
-	]]></description>
+        <h1>Bootstrap 3.1.1 Template for Joomla! 3.x</h1>
+    ]]></description>
     <files>
         <folder>css</folder>
         <folder>fonts</folder>
@@ -47,23 +47,6 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-
-                <!-- WIDTH MAIN-->
-	
-                <field name="leftColumnWidth" type="list" default="3" label="Left Column Width" description="Choose a width for your left column">
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </field>
-				
-                <field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </field>
-				
 
                 <!-- MODERNIZR-->
                 <field name="modernizr" type="radio" default="0" 

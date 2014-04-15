@@ -60,18 +60,28 @@ include 'includes/params.php';
                 <div id="navigation">
                     <div class="container">
                         <div class="navbar navbar-default" role="navigation">
+                            <div id="brand">
+                                <a href="<?php echo $this->params->get('logo_link') ?>">
+                                    <img src="<?php echo $this->params->get('logo_file') ?>"class="thumbnail" alt="Logo" />
+                                </a>
+                            </div>
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <div id="brand">
-                                    <a href="<?php echo $this->params->get('logo_link') ?>">
-                                        <img style="width:<?php echo $this->params->get('logo_width') ?>px; height:<?php echo $this->params->get('logo_height') ?>px; " src="<?php echo $this->params->get('logo_file') ?>" alt="Logo" />
-                                    </a>
-                                </div>
+                                <?php if ($this->countModules('left')) : ?>
+                                    <button type="button" class="navbar-toggle navbar-toggle-left" data-toggle="offcanvas">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                <?php endif; ?>
+                                <?php if ($this->countModules('navigation')) : ?>
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                <?php endif; ?>
                             </div>
                             <div class="navbar-collapse collapse">
                                 <?php if ($this->countModules('navigation')) : ?>
@@ -93,6 +103,26 @@ include 'includes/params.php';
                     </div>
                 <?php endif; ?>
                 <!--fullwidth-->
+                <!--bartop-->
+                <?php if ($this->countModules('bartop-left') || $this->countModules('bartop-right')) : ?>
+                    <div id="bartop">
+                        <div class="container">
+                            <div class="row">
+                                <?php if ($this->countModules('bartop-left')) : ?>
+                                    <div class="col-xs-12 col-md-<?php echo $bartopGrid;?>">
+                                        <jdoc:include type="modules" name="bartop-left" style="none"/>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($this->countModules('bartop-right')) : ?>
+                                    <div class="col-xs-12 col-md-<?php echo $bartopGrid;?>">
+                                        <jdoc:include type="modules" name="bartop-right" style="none"/>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <!--bartop-->
                 <!--Showcase-->
                 <?php if ($this->countModules('showcase')) : ?>
                     <div id="showcase">
@@ -126,15 +156,15 @@ include 'includes/params.php';
 
                         </div>
                     <?php endif; ?>
-                    <div id="main" class="row show-grid">
+                    <div id="main" class="row show-grid row-offcanvas row-offcanvas-left">
                         <!-- Left -->
                         <?php if ($this->countModules('left')) : ?>
-                            <div id="sidebar" class="col-sm-<?php echo $leftcolgrid; ?>">
+                            <div id="sidebar" class="col-xs-12 col-sm-4 col-md-3 sidebar-offcanvas">
                                 <jdoc:include type="modules" name="left" style="xhtml" />
                             </div>
                         <?php endif; ?>
                         <!-- Component -->
-                        <div id="container" class="col-sm-<?php echo (12 - $leftcolgrid - $rightcolgrid); ?>">
+                        <div id="container" class="col-xs-12 col-sm-8 col-md-<?php echo $contentWidth ; ?>">
                             <!-- Content-top Module Position -->        
                             <?php if ($this->countModules('content-top')) : ?>
                                 <div id="content-top">
@@ -143,10 +173,10 @@ include 'includes/params.php';
                                     </div>
                                 </div>
                             <?php endif; ?>
-                            <div class="main-box">
-                                <jdoc:include type="component" />
-                                <jdoc:include type="message" />        
-                            </div>
+
+                            <jdoc:include type="component" />
+                            <jdoc:include type="message" />   
+
                             <!-- Below Content Module Position -->        
                             <?php if ($this->countModules('content-bottom')) : ?>
                                 <div id="content-bottom">
@@ -158,7 +188,7 @@ include 'includes/params.php';
                         </div>
                         <!-- Right -->
                         <?php if ($this->countModules('right')) : ?>
-                            <div id="sidebar-2" class="col-sm-<?php echo $rightcolgrid; ?>">
+                            <div id="sidebar-2" class="hidden-sm col-md-3">
                                 <jdoc:include type="modules" name="right" style="xhtml" />
                             </div>
                         <?php endif; ?>
