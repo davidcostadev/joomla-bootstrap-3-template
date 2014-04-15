@@ -7,9 +7,15 @@
     <copyright>Copyright © 2014 David Costa</copyright>
     <authorEmail>davidcosta@csthost.com.br</authorEmail>
     <authorUrl>davidcosta.com.br</authorUrl>
-    <version>1.0.1</version>
-    <description><![CDATA[ 
-        <h1>Bootstrap 3.1.1 Template for Joomla! 3.x</h1>
+    <version>1.1.0</version>
+    <description><![CDATA[
+        <div class="alert alert-success">
+            <h1>Bootstrap 3.1.1 Template for Joomla! 3.x</h1>
+            <p>This is a fork in project created by Gonzalo Suez and improve by Adrian Fürschuß and David Costa</p>
+            <p>This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x or 2.5</p>
+            <br>
+            <p><a href="https://github.com/davidsantanacosta/joomla-bootstrap-3-template" class="btn btn-primary btn-large" target="_blank">See Last Updates</a> </p>
+        </div>
     ]]></description>
     <files>
         <folder>css</folder>

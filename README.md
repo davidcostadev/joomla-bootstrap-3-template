@@ -5,7 +5,7 @@ Joomla Bootstrap 3 Template
 This is a fork in project created by Gonzalo Suez and improve by Adrian Fürschuß and David Costa
 
 
-This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x
+This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x or 2.5
 
 
 ### Some features:
@@ -20,8 +20,11 @@ This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x
 - Positions 100% managed for class CSS
 - Left and Right Modules with independent proportions!
 - A Fullwidth position for your sliders!
-- Bartop-fullwidth **New**
 - Sticky Footer by default!
+- Bartop-fullwidth **New**
+- Tree bottoms modules **New**
+- Layout Alterative to mod_menu **New**
+
 
 
 #### Attention: This version is stable
