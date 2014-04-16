@@ -62,9 +62,7 @@ include 'includes/params.php';
                 <div class="navbar navbar-default navbar-static-top" id="navigation" role="navigation">
                     <div class="container">
                         <div id="brand">
-                            <a href="<?php echo JURI::base() ?>">
-                                <img src="<?php echo $this->params->get('logo_file') ?>" class="thumbnail" alt="Logo" />
-                            </a>
+                            <a href="<?php echo JURI::base() ?>" class="logo_img" style="background-image: url(<?php echo $this->params->get('logo_file') ?>)"></a>
                         </div>
                         <div class="navbar-header">
                             <?php if ($this->countModules('left')) : ?>

@@ -32,14 +32,14 @@ img {
 #brand {
     float: left;
     width: 25%;
-    padding: 10px 0;
 }
-#brand .thumbnail{
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    margin: 0px;
-    max-height: 40px;
-    padding: 0px;
+#brand .logo_img{
+    width: 400px;
+    height: 80px;
+    background: 50% 50% no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    display: block;
 }
 
 #top {
