@@ -25,19 +25,18 @@ include 'includes/params.php';
     ?>
 
     <body>
+        <!--absolute-->
+        <?php if ($this->countModules('absolute')) : ?>
+            <div class="row">
+                <jdoc:include type="modules" name="absolute" style="absolute_bottomright" />        
+            </div>
+        <?php endif; ?>
+        <!--absolute-->
         <div class="wrapper">
             <?php if ($this->countModules('top') || $this->countModules('top-left') || $this->countModules('top-right')) : ?>
                 <header id="top">
                     <div class="container">
-
                         <nav role="navigation" id="topnav">
-                            <!--top-->
-                            <?php if ($this->countModules('top')) : ?>
-                                <div class="row">
-                                    <jdoc:include type="modules" name="top" style="none" />        
-                                </div>
-                            <?php endif; ?>
-                            <!--top-->
                             <!-- top-left -->
                             <?php if ($this->countModules('top-left')) : ?>
                                 <div class="pull-left">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade">
-    <name>Bootstrap 3.1.1 for Joomla</name>
+    <name>Bootstrap 3 for Joomla</name>
     <creationDate>April 2014</creationDate>
     <author>David Costa, Gonzalo Suez and Adrian Fürschuß</author>
     <copyright>Copyright © 2014 David Costa</copyright>
@@ -32,7 +32,7 @@
         <filename>templateDetails.xml</filename>
     </files>
     <positions>
-        <position>top</position>
+        <position>absolute</position>
         <position>top-left</position>
         <position>top-right</position>
         <position>navigation</position>

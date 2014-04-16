@@ -108,3 +108,59 @@ function modChrome_grid6($module, &$params, &$attribs) {
         </div>
     <?php endif;
 }
+
+/*
+ * Module chrome for rendering in absolute mode in top right
+ */
+function modChrome_absolute_topright($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="absolute absolute-top absolute-right <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <?php if ($module->showtitle != 0) : ?>
+                <h3 class="title"><?php echo $module->title; ?></h3>
+            <?php endif; ?>
+            <?php echo $module->content; ?>
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering in absolute mode in top left
+ */
+function modChrome_absolute_topleft($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="absolute absolute-top absolute-left <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <?php if ($module->showtitle != 0) : ?>
+                <h3 class="title"><?php echo $module->title; ?></h3>
+            <?php endif; ?>
+            <?php echo $module->content; ?>            
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering in absolute mode in top right
+ */
+function modChrome_absolute_bottomright($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="absolute absolute-bottom absolute-right <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <?php if ($module->showtitle != 0) : ?>
+                <h3 class="title"><?php echo $module->title; ?></h3>
+            <?php endif; ?>
+            <?php echo $module->content; ?>           
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering in absolute mode in bottom left
+ */
+function modChrome_absolute_bottomleft($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="absolute absolute-bottom absolute-left <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
+            <?php if ($module->showtitle != 0) : ?>
+                <h3 class="title"><?php echo $module->title; ?></h3>
+            <?php endif; ?>
+            <?php echo $module->content; ?>           
+        </div>
+    <?php endif;
+}

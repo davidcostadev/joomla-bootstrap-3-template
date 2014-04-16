@@ -353,3 +353,24 @@ body {
 
     }
 }
+
+/** 
+ * Style Classe for modules absolutes
+ */
+.absolute{
+    position: fixed;
+    z-index: 9999;
+}
+.absolute-right{
+    right: 0;
+}
+.absolute-left{
+    left: 0;
+}
+.absolute-top{
+    top: 0;
+}
+.absolute-bottom{
+    bottom: 0;
+}
+   
