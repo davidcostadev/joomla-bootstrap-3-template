@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade">
-    <name>Bootstrap 3 for Joomla</name>
-    <creationDate>2014-03-27</creationDate>
-    <author>Gonzalo Suez, Adrian Fürschuß e David Costa</author>
+    <name>Bootstrap 3.1.1 for Joomla</name>
+    <creationDate>April 2014</creationDate>
+    <author>David Costa, Gonzalo Suez and Adrian Fürschuß</author>
     <copyright>Copyright © 2014 David Costa</copyright>
     <authorEmail>davidcosta@csthost.com.br</authorEmail>
     <authorUrl>davidcosta.com.br</authorUrl>
-    <version>1.1.0</version>
+    <version>1.2.0-dev</version>
     <description><![CDATA[
         <div class="alert alert-success">
             <h1>Bootstrap 3.1.1 Template for Joomla! 3.x</h1>
-            <p>This is a fork in project created by Gonzalo Suez and improve by Adrian Fürschuß and David Costa</p>
+            <p>This is a fork in project created by Gonzalo Suez and improve by David Costa and Adrian Fürschuß</p>
             <p>This template is based in Twitter Bootstrap 3.1.1, for Joomla! 3.x or 2.5</p>
             <br>
             <p><a href="https://github.com/davidsantanacosta/joomla-bootstrap-3-template" class="btn btn-primary btn-large" target="_blank">See Last Updates</a> </p>
