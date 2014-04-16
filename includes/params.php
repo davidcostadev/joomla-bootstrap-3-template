@@ -43,7 +43,9 @@ if (isset($this->_script['text/javascript'])) {
         unset($this->_script['text/javascript']);
 }
 
-
+// Put othes script under jquery
+$scriptsBefore = $doc->_scripts;
+unset($doc->_scripts);
 
 // add javascript files
 // JavaScript plugins (requires jQuery) 
@@ -60,6 +62,11 @@ $doc->addScript('templates/' . $this->template . '/js/display.js');
 $doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.min.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/navbar.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+
+foreach ($scriptsBefore as $key => $value) {
+    $doc->addScript($key);
+}
+
 
 // Variables
 $app         = JFactory::getApplication();
