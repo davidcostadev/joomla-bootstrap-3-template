@@ -14,7 +14,6 @@
 // no direct access
 defined('_JEXEC') or die;
 
- 
 ?>
 
 <ul class="nav navbar-nav<?php if(!empty($class_sfx)) echo ' '.$class_sfx;  ?>"<?php

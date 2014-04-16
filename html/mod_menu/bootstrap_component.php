@@ -1,12 +1,17 @@
 <?php
+
 /**
- * @package     Joomla.Site
- * @subpackage  mod_menu
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * Bootstrap 3 for Joolma
+ *
+ * @author David Costa<davidcosta@csthost.com.br>
+ * @copyright Copyright © 2014 David Costa <davidcosta@csthost.com.br>. All right reserved
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link https://github.com/davidsantanacosta/joomla-bootstrap-3-template
+ *
  */
 
+// no direct access
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
