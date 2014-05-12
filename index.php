@@ -171,8 +171,8 @@ include 'includes/params.php';
                                 </div>
                             <?php endif; ?>
 
+                            <jdoc:include type="message" />
                             <jdoc:include type="component" />
-                            <jdoc:include type="message" />   
 
                             <!-- Below Content Module Position -->        
                             <?php if ($this->countModules('content-bottom')) : ?>
