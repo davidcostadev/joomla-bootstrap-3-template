@@ -21,7 +21,7 @@ if($item->parent) {
 	$parentData = 'data-toggle="dropdown"';
 	$item->anchor_css .= ' dropdown-toggle';
 } else {
-	$parentData = '"';
+	$parentData = '';
 }
 
 $class = $item->anchor_css ? 'class="' . $item->anchor_css . '" ' : '';

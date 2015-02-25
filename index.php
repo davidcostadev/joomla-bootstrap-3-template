@@ -47,7 +47,7 @@ include 'includes/params.php';
                             <!-- top-right -->
                             <?php if ($this->countModules('top-right')) : ?>
                                 <div class="pull-right">
-                                    <jdoc:include type="modules" name="top-right" style="none" />
+                                    <jdoc:include type="modules" name="top-right" style="topright" />
                                 </div>
                             <?php endif; ?>
                             <!-- top-right -->
@@ -91,6 +91,15 @@ include 'includes/params.php';
                     </div>
                 </div>
                 <!--Navigation-->
+                <!--submenu-->
+                 <?php if ($this->countModules('submenu')) : ?>
+                    <div id="submenu">
+                        <div class="container">
+                            <jdoc:include type="modules" name="submenu" style="none"/>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <!--submenu-->
                 <!--fullwidth-->
                 <?php if ($this->countModules('fullwidth')) : ?>
                     <div id="fullwidth">
@@ -100,18 +109,38 @@ include 'includes/params.php';
                     </div>
                 <?php endif; ?>
                 <!--fullwidth-->
+                <!--slide-->
+                <?php if ($this->countModules('slide-left') || $this->countModules('slide-right')) : ?>
+                    <div id="slide">
+                        <div class="container">
+                            <div class="row">
+                                <?php if ($this->countModules('slide-left')) : ?>
+                                    <div class="col-xs-12 col-md-9">
+                                        <jdoc:include type="modules" name="slide-left" style="none"/>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($this->countModules('slide-right')) : ?>
+                                    <div class="col-xs-12 col-md-3">
+                                        <jdoc:include type="modules" name="slide-right" style="none"/>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <!--slide-->
                 <!--bartop-->
                 <?php if ($this->countModules('bartop-left') || $this->countModules('bartop-right')) : ?>
                     <div id="bartop">
                         <div class="container">
                             <div class="row">
                                 <?php if ($this->countModules('bartop-left')) : ?>
-                                    <div class="col-xs-12 col-md-<?php echo $bartopGrid;?>">
+                                    <div class="col-xs-12 col-md-9">
                                         <jdoc:include type="modules" name="bartop-left" style="none"/>
                                     </div>
                                 <?php endif; ?>
                                 <?php if ($this->countModules('bartop-right')) : ?>
-                                    <div class="col-xs-12 col-md-<?php echo $bartopGrid;?>">
+                                    <div class="col-xs-12 col-md-3">
                                         <jdoc:include type="modules" name="bartop-right" style="none"/>
                                     </div>
                                 <?php endif; ?>
@@ -170,9 +199,10 @@ include 'includes/params.php';
                                     </div>
                                 </div>
                             <?php endif; ?>
-
+                            
                             <jdoc:include type="message" />
                             <jdoc:include type="component" />
+                               
 
                             <!-- Below Content Module Position -->        
                             <?php if ($this->countModules('content-bottom')) : ?>
@@ -193,6 +223,26 @@ include 'includes/params.php';
                 </div>
                 <!-- Content -->
             </div>
+            <!--barbottom-->
+            <?php if ($this->countModules('barbottom-left') || $this->countModules('barbottom-right')) : ?>
+                <div id="barbottom">
+                    <div class="container">
+                        <div class="row">
+                            <?php if ($this->countModules('barbottom-left')) : ?>
+                                <div class="col-xs-12 col-md-<?php echo $barbottomGrid;?>">
+                                    <jdoc:include type="modules" name="barbottom-left" style="none"/>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($this->countModules('barbottom-right')) : ?>
+                                <div class="col-xs-12 col-md-<?php echo $barbottomGrid;?>">
+                                    <jdoc:include type="modules" name="barbottom-right" style="none"/>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <!--barbottom-->
             <!-- bottom-a -->
             <?php if ($this->countModules('bottom-a')) : ?>
                 <div id="bottom-a">
@@ -266,7 +316,7 @@ include 'includes/params.php';
         <jdoc:include type="modules" name="debug" />        
         <!-- page -->        
         <!-- JS -->
-        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script>
+        <?php /*script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/bootstrap.min.js"></script*/ ?>
         <!-- JS -->
     </body>
 </html>

@@ -43,11 +43,11 @@ img {
 }
 
 #top {
-    background-color: #444444;
-    color: #ddd;
-    font-size: 14px;
-    padding-bottom:6px;
-    padding-top: 6px;
+    background-color: #E7E7E7;
+    color: #777;
+    font-size: 12px;
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 #top .container .separator {
@@ -75,22 +75,29 @@ img {
     padding: 0;
 }
 #bartop{
-    background: #428BCA;
     background-color: #F8F8F8;
     border-top: 1px solid #E7E7E7;
     border-bottom: 1px solid #E7E7E7;
     margin-bottom: 15px;
 }
+#barbottom{
+    background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    margin-top: 15px;
+}
 #fullwidth{
     overflow: hidden;
     margin-bottom: 15px;
 }
-
 #fullwidth .moduletable {
     border: 0;
     padding: 0;
 }
-
+#submenu{
+    margin-top: -15px;
+    margin-bottom: 20px;
+    background-color: #444444;
+}
 #bottom-a{
     border-bottom: 2px solid #F3F3F3;
     border-top: 2px solid #F3F3F3;
@@ -166,17 +173,9 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding: 4px 6px;
     vertical-align: middle;
 }
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-label, input, button, select, textarea {
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 18px;
-    font-family: arial;
-}
-label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+
+
+button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
     cursor: pointer;
 }
 #pop-print {
@@ -216,9 +215,6 @@ body {
 
 /* JOOMLA */
 
-.form-horizontal .control-label {
-    text-align: inherit;
-}
 
 .cols-1 {
     display: block;
@@ -373,4 +369,9 @@ body {
 .absolute-bottom{
     bottom: 0;
 }
-   
+
+.navigation .menu_top{
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}

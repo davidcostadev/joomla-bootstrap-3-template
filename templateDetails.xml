@@ -38,8 +38,13 @@
         <position>navigation</position>
         <position>breadcrumbs</position>
         <position>fullwidth</position>
+        <position>slide-left</position>
+        <position>slide-right</position>
         <position>bartop-left</position>
         <position>bartop-right</position>
+        <position>barbottom-left</position>
+        <position>barbottom-right</position>
+        <position>submenu</position>
         <position>showcase</position>
         <position>feature</position>
         <position>left</position>

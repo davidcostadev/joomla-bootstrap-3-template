@@ -49,11 +49,11 @@ unset($doc->_scripts);
 
 // add javascript files
 // JavaScript plugins (requires jQuery) 
-$doc->addScript('templates/'.$this->template . '/js/jquery-1.10.2.min.js');
+$doc->addScript('templates/'.$this->template . '/js/jquery-1.11.1.min.js');
 $doc->addScript('templates/'.$this->template . '/js/jquery-noconflict.js');
 
 // Include all compiled plugins (below), or include individual files as needed 
-$doc->addScript('templates/'.$this->template . '/js/bootstrap.min.js');
+//$doc->addScript('templates/'.  $this->template . '/js/bootstrap.js');
 $doc->addScript('templates/' . $this->template . '/js/holder.js');
 $doc->addScript('templates/' . $this->template . '/js/dropdown.js');
 $doc->addScript('templates/' . $this->template . '/js/display.js');
@@ -102,10 +102,20 @@ if($fontawesome == 1) {
 
 // file ending
 if($this->countModules('bartop-left') > 0 && $this->countModules('bartop-right') > 0) {
-    $bartopGrid = 6;
+    $bartopGridLeft = 9;
+    $bartopGridRight= 3;
 } else {
-    $bartopGrid = 12;
+    $bartopGridLeft = 12;
+    $bartopGridRight= 12;
 }
+
+// file ending
+if($this->countModules('barbottom-left') > 0 && $this->countModules('barbottom-right') > 0) {
+    $barbottomGrid = 6;
+} else {
+    $barbottomGrid = 12;
+}
+
 
 
 //Content width

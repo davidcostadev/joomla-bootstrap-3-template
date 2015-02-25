@@ -32,6 +32,17 @@ defined('_JEXEC') or die;
 /*
  * Module chrome for rendering the module in a submenu
  */
+function modChrome_topright($module, &$params, &$attribs) {
+    if (!empty ($module->content)) : ?>
+        <div class="<?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>" style="margin-left: 5px;display: inline;">
+            <?php echo $module->content; ?>
+        </div>
+    <?php endif;
+}
+
+/*
+ * Module chrome for rendering the module in a submenu
+ */
 function modChrome_block($module, &$params, &$attribs) {
     if (!empty ($module->content)) : ?>
         <div class="block <?php if ($params->get('moduleclass_sfx')!='') : ?><?php echo $params->get('moduleclass_sfx'); ?><?php endif; ?>">
